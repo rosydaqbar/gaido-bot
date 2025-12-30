@@ -1,0 +1,29 @@
+{
+  "name": "discord-slash-bot",
+  "version": "1.0.0",
+  "description": "A Discord bot that responds to slash commands using Discord Components v2",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "deploy": "node src/utils/deploy.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": ["discord", "bot", "slash-commands", "discord.js"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "fast-check": "^3.15.0",
+    "@types/jest": "^29.5.8"
+  },
+  "engines": {
+    "node": ">=16.11.0"
+  }
+}
