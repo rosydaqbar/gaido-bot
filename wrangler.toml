@@ -1,0 +1,27 @@
+name = "shrill-snowflake-32e1"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Cron trigger for weekly quest reminders
+# This runs every Monday at 10:00 PM (22:00) - matches your screenshot
+[triggers]
+crons = ["0 22 * * sun"]
+
+# Environment variables (set these in Cloudflare dashboard or via wrangler secret)
+# DO NOT commit actual secrets to git - use 'wrangler secret put' command instead
+[vars]
+# Set these as secrets using: wrangler secret put DISCORD_TOKEN
+# DISCORD_TOKEN = "your_discord_bot_token_here"
+# DISCORD_PUBLIC_KEY = "your_discord_public_key_here" 
+# DISCORD_APPLICATION_ID = "your_discord_application_id_here"
+# DISCORD_CHANNEL_ID = "your_discord_channel_id_here"
+
+# Worker configuration
+[build]
+command = ""
+
+# Routes (optional - you can also set this in the Cloudflare dashboard)
+# [[routes]]
+# pattern = "your-domain.com/discord-webhook"
+# zone_name = "your-domain.com"
